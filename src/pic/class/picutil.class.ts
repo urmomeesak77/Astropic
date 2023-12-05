@@ -6,7 +6,7 @@ export class PicUtil {
     private dateUtil: DateUtil = new DateUtil;
 
     validate(code: string):boolean {
-        let regex = new RegExp("^[1-8][0-9]{10}");
+        let regex = new RegExp("^[1-8][0-9]{10}$");
         if (!regex.test(code)) {
             throw new Error("Invalid personal indentification code syntax");
         }
@@ -21,7 +21,7 @@ export class PicUtil {
         return true; 
     }
 
-    getSexFromCode(code: string) {
+    getGenderFromCode(code: string) {
         return Number(code.charAt(0)) % 2 == 0 ? Gender.Female : Gender.Male;
     }
 

@@ -48,7 +48,7 @@ export class PicService {
             return {};
         }
         return {
-            gender: this.picUtil.getSexFromCode(code),
+            gender: this.picUtil.getGenderFromCode(code),
             dob: this.picUtil.getDobFromCode(code),
             sequence: this.picUtil.getSequenceFromCode(code),
         }
