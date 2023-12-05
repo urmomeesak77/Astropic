@@ -15,7 +15,6 @@ export class PicService {
 
         do {
             code = this.picUtil.generateForPerson(person, sequence);
-            let s = this.knownPics.find(item => item == code);
             if (this.findOne(code) === undefined) {
                 this.knownPics.push(code);
                 break;                
