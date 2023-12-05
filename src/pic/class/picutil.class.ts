@@ -5,7 +5,7 @@ import { DateUtil } from './dateutil.class';
 export class PicUtil {
     private dateUtil: DateUtil = new DateUtil;
 
-    validate(code: string) {
+    validate(code: string):boolean {
         let regex = new RegExp("^[1-8][0-9]{10}");
         if (!regex.test(code)) {
             throw new Error("Invalid personal indentification code syntax");
