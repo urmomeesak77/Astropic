@@ -42,7 +42,7 @@ export class PicService {
 
     gePicInfo(code: string) {
         try {
-            this.picUtil.validate("38002292228");
+            this.picUtil.validate(code);
         }
         catch (e) {
             return {};
