@@ -5,7 +5,7 @@
 <p>GET [HOST]:3000/pic/[:code] - validate pic and get gender, dob and sequence info:<br />
 <pre>
 {
-    "sex": "M",
+    "gender": "M",
     "dob": "1980-02-29",
     "sequence": "222"
 }
