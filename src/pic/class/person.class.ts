@@ -4,6 +4,7 @@ export enum Gender {
     "Male" = "M",
     "Female" = "F"  
 }
+
 export class Person {
     @IsDefined()
     @IsEnum(Gender)

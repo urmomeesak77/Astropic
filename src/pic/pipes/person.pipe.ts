@@ -15,5 +15,4 @@ export class PersonValidationPipe implements PipeTransform {
 
         return person;
     }
-
 }

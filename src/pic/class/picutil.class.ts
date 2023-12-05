@@ -22,7 +22,7 @@ export class PicUtil {
     }
 
     getSexFromCode(code: string) {
-        return Number(code.charAt(0)) % 2 == 0 ? "F" : "M";
+        return Number(code.charAt(0)) % 2 == 0 ? Gender.Female : Gender.Male;
     }
 
     getDobFromCode(code:string) {
@@ -55,7 +55,7 @@ export class PicUtil {
     }
 
     getGenderAndCenturyPart(person: Person) {
-        let offset = person.gender.toUpperCase() == "M" ? 1 : 0;
+        let offset = person.gender.toUpperCase() == Gender.Male ? 1 : 0;
         let year = new Date(person.dob).getFullYear();
 
         let s = Math.floor(year / 100) - 17;

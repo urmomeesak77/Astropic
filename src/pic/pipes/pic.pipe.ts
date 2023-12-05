@@ -16,5 +16,4 @@ export class PicValidationPipe implements PipeTransform {
 
         return code;
     }
-
 }
