@@ -1,4 +1,3 @@
-import { Injectable } from '@nestjs/common';
 import { Person,Gender } from './person.class';
 import { DateUtil } from './dateutil.class';
 
@@ -78,13 +77,13 @@ export class PicUtil {
         if (!Object.values<string>(Gender).includes(person.gender.toUpperCase())) {
             throw new Error("Invalid gender");
         }
-        let year = new Date(person.dob).getFullYear();
-        if (isNaN(year)) {
+        if (!this.dateUtil.validate(person.dob)) {
             throw new Error("Invalid dob");
         }
 
+        let year = new Date(person.dob).getFullYear();
         if (year < 1800 || year > 2199) {
-            throw new Error("Invalid is out of range");
+            throw new Error("Dob is out of range");
         }
     }
 
