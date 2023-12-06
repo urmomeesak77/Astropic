@@ -53,10 +53,4 @@ export class PicService {
         }
        
     }
-
-    generatePic(person: Person, countr: number  = 1) {
-        let date = new Date(person.dob);
-
-    }
-
 }
